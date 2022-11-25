@@ -1,9 +1,9 @@
-import * as path from 'path'
-import * as webpack from 'webpack'
-import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin'
+import * as path from 'path';
+import * as webpack from 'webpack';
+import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 
 const config: webpack.Configuration = {
-  mode: process.env.NODE_ENV as any,
+  mode: process.env.NODE_ENV as webpack.Configuration['mode'],
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -21,9 +21,9 @@ const config: webpack.Configuration = {
   resolve: {
     extensions: ['.ts', '.js'],
     plugins: [
-      new TsconfigPathsPlugin({}) as any
+      new TsconfigPathsPlugin({})
     ]
   },
-}
+};
 
-export default config
+export default config;
