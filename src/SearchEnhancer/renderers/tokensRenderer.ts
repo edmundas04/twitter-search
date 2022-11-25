@@ -41,12 +41,12 @@ const getTokenElement = (token: IToken, onTokenRemove: ITokensProps['onTokenRemo
 
 export const tokensRenderer = createRenderer({
   style: tokensStyle,
-  createElement: (props: ITokensProps) => {
+  createElement: ({ tokens, onTokenRemove }: ITokensProps) => {
     const tokensContainer = document.createElement('div');
     tokensContainer.id = TOKENS_CONTAINER_ID;
     tokensContainer.className = 'tokensContainer';
-    props.tokens.forEach((token) => {
-      tokensContainer.appendChild(getTokenElement(token, props.onTokenRemove));
+    tokens.forEach((token) => {
+      tokensContainer.appendChild(getTokenElement(token, onTokenRemove));
     });
     return tokensContainer;
   },
