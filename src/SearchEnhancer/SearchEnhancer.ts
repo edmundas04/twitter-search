@@ -9,7 +9,7 @@ export class SearchEnhancer {
 
   constructor() {
     this.state = {
-      tokens: []
+      tokens: [{type: 'from', value: '@elonMusk'}]
     };
 
     this.setTokens();
