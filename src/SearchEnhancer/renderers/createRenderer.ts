@@ -1,6 +1,6 @@
 interface IRendererOptions<T> {
   style: string,
-  createElement(state: T): Element,
+  createElement(props: T): Element,
   removeExistingElement(): void;
   applyElement(newElement: Element): void;
 }

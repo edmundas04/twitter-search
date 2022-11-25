@@ -12,10 +12,18 @@ export class SearchEnhancer {
       tokens: [{type: 'from', value: '@elonMusk'}]
     };
 
-    this.setTokens();
+    this.renderTokens();
   }
 
-  private setTokens() {
-    tokensRenderer(this.state.tokens);
-  }
+  private renderTokens = () => {
+    tokensRenderer({
+      tokens: this.state.tokens,
+      onTokenRemove: this.handleTokenRemove,
+    });
+  };
+
+  private handleTokenRemove = (token: IToken) => {
+    this.state.tokens = this.state.tokens.filter(x => x.type !== token.type || x.value !== token.value);
+    this.renderTokens();
+  };
 }
