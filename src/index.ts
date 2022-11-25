@@ -1,1 +1,3 @@
-console.log('Hello world!!!!');
+import { SearchEnhancer } from './SearchEnhancer';
+
+new SearchEnhancer();

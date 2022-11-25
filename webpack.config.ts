@@ -5,6 +5,7 @@ import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 const config: webpack.Configuration = {
   mode: process.env.NODE_ENV as webpack.Configuration['mode'],
   entry: './src/index.ts',
+  devtool: false,
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'twitter-search.js'

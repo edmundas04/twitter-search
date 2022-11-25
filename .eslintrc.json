@@ -18,6 +18,8 @@
         "@typescript-eslint"
     ],
     "rules": {
-      "semi": "warn"
+      "semi": "warn",
+      "eol-last": "warn",
+      "quotes": [1, "single", { "avoidEscape": true }]
     }
 }
