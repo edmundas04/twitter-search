@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "module": "commonjs",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "target": "es5",
+    "esModuleInterop": true,
+  },
+  "include": [
+    "src/**/*.ts",
+  ]
+}
